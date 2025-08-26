@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div id="intro-screen" class="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-indigo-600 via-indigo-700 to-indigo-900 z-50">
+        <div class="question-card transition-opacity duration-500 ease-in-out bg-white dark:bg-gray-800 dark:text-gray-100 shadow-2xl rounded-2xl px-12 py-10 max-w-lg w-full text-center border-4 border-violet-500">
+            <h1 class="text-5xl font-extrabold mb-6 text-blue-700 dark:text-indigo-300 drop-shadow-lg">¡Clase 2!</h1>
+            <p class="text-gray-700 dark:text-gray-200 mb-8 text-lg font-medium">
+                Descarta parásitos hasta llegar al buscado.
+            </p>
+            <button id="start-button" class="start-button bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white font-bold py-3 px-10 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-xl">
+                Comenzar
+            </button>
+        </div>
+    </div>
+
+    <div id="game-container" class="min-h-screen flex flex-col items-center justify-center p-4">
+        <div class="bg-indigo-900 p-8 rounded-xl shadow-2xl max-w-4xl w-full mx-auto my-8 border border-indigo-800">
+            <h1 id="game-title" class="text-4xl md:text-5xl font-extrabold text-center mb-8">
+                Descarta uno
+            </h1>
+            <p id="consigna" class="text-xl md:text-2xl text-center mb-10 font-medium"></p>
+
+            <div id="parasite-grid" class="flex flex-wrap justify-center items-center gap-6">
+            </div>
+
+            <div id="game-message" class="flex justify-center text-3xl md:text-4xl font-bold text-center mt-12 text-green-400 hidden"></div>
+            <button id="restart-button" class="mt-10 mx-auto block bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hidden">
+                Reiniciar Juego
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+ 
+</body>
+</html>

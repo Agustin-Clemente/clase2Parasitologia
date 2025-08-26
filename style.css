@@ -1,0 +1,46 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .parasite-card {
+            transition: all 0.5s ease-out; 
+            transform: translateX(0);
+            opacity: 1;
+            width: calc(33.333% - 1.333rem);
+            max-width: 300px;
+        }
+
+        
+        @media (max-width: 1023px) { 
+            .parasite-card {
+                width: calc(50% - 0.75rem); 
+            }
+        }
+
+    
+        @media (max-width: 639px) { 
+            .parasite-card {
+                width: 100%;
+            }
+        }
+
+        
+        .parasite-card.eliminated {
+            transform: translateX(150%) scale(0.8);
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .parasite-card.wrong {
+            animation: shake 0.3s ease-in-out forwards;
+        }
+        
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+  
