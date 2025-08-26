@@ -256,7 +256,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             ${finalParasite.name}
                         </div>
                     `;
-                    gameMessageEl.textContent = `¡Felicidades! ${currentRound.feedback}`;
+                    gameTitleEl.textContent = '¡Felicidades!'
+                    gameMessageEl.textContent = `${currentRound.feedback}`;
                     gameMessageEl.classList.remove('hidden', 'bg-red-700', 'text-red-200');
                     gameMessageEl.classList.add('bg-green-700', 'text-green-200', 'rounded-xl', 'py-4', 'px-6', 'inline-block', 'mx-auto', 'mt-4');
 
@@ -267,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         restartButtonEl.classList.remove('hidden');
                     } else {
                         consignaEl.textContent = '¡Juego Completado!';
-                        gameMessageEl.textContent = '¡Felicidades por completar todas las series!';
+                        gameMessageEl.textContent = `${currentRound.feedback}`;
                         restartButtonEl.textContent = 'Reiniciar Juego';
                         restartButtonEl.onclick = initializeGame;
                         restartButtonEl.classList.remove('hidden');
